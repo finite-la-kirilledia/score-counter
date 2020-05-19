@@ -38,7 +38,7 @@
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
                     android:paddingBottom="24dp"
-                    android:text="0"
+                    android:text="@{scoreViewModel.scoreTeamA.toString()}"
                     android:textColor="#000000"
                     android:textSize="56sp" />
 
@@ -48,6 +48,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginBottom="8dp"
+                    android:onClick="@{()->scoreViewModel.addForTeamA(3)}"
                     android:text="+3 Points" />
 
                 <Button
@@ -56,6 +57,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginBottom="8dp"
+                    android:onClick="@{()->scoreViewModel.addForTeamA(2)}"
                     android:text="+2 Points" />
 
                 <Button
@@ -64,6 +66,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginBottom="8dp"
+                    android:onClick="@{()->scoreViewModel.addForTeamA(1)}"
                     android:text="Free throw" />
             </LinearLayout>
 
@@ -95,7 +98,7 @@
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
                     android:paddingBottom="24dp"
-                    android:text="0"
+                    android:text="@{scoreViewModel.scoreTeamB.toString()}"
                     android:textColor="#000000"
                     android:textSize="56sp" />
 
@@ -105,6 +108,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginBottom="8dp"
+                    android:onClick="@{()->scoreViewModel.addForTeamB(3)}"
                     android:text="+3 Points" />
 
                 <Button
@@ -113,6 +117,7 @@
                     android:layout_marginLeft="22dp"
                     android:layout_marginRight="22dp"
                     android:layout_marginBottom="8dp"
+                    android:onClick="@{()->scoreViewModel.addForTeamB(2)}"
                     android:text="+2 Points" />
 
                 <Button
@@ -121,6 +126,7 @@
                     android:layout_marginLeft="22dp"
                     android:layout_marginRight="22dp"
                     android:layout_marginBottom="8dp"
+                    android:onClick="@{()->scoreViewModel.addForTeamB(1)}"
                     android:text="Free throw" />
             </LinearLayout>
         </LinearLayout>
@@ -131,6 +137,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="32dp"
+            android:onClick="@{()->scoreViewModel.resetScores()}"
             android:text="Reset" />
 
     </RelativeLayout>
