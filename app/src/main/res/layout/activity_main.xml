@@ -1,5 +1,12 @@
 <layout>
 
+    <data>
+
+        <variable
+            name="scoreViewModel"
+            type="com.example.scorecounter.ScoreViewModel" />
+    </data>
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
